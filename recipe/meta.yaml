@@ -32,15 +32,9 @@ build:
 requirements:
   build:
     - r-base
-    - {{ compiler('c') }}                # [not win]
-    - {{native}}toolchain                # [win]
-    - {{ cdt('libxrender-devel') }}      # [linux]
-    - {{ cdt('libxext-devel') }}         # [linux]
-    - {{ cdt('libx11-devel') }}          # [linux]
-    - {{ cdt('xorg-x11-proto-devel') }}  # [linux]
-    - {{ cdt('libxau-devel') }}          # [linux]
-    - {{ cdt('libxt-devel') }}           # [linux]
-    - {{posix}}filesystem                # [win]
+    - {{ compiler('c') }}        # [not win]
+    - {{native}}toolchain        # [win]
+    - {{posix}}filesystem        # [win]
     - {{posix}}autoconf
     - {{posix}}automake
     - {{posix}}pkg-config
@@ -48,7 +42,7 @@ requirements:
 
   run:
     - r-base
-    - {{native}}gcc-libs                 # [win]
+    - {{native}}gcc-libs         # [win]
 
 test:
   commands:
