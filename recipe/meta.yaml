@@ -42,6 +42,8 @@ requirements:
     - {{ cdt('libxt-devel') }}           # [linux]
     - {{posix}}filesystem                # [win]
     - {{posix}}autoconf
+    - {{posix}}grep                      # [win]
+    - {{posix}}sed                       # [win]
     - {{posix}}automake-wrapper          # [win]
     - {{posix}}automake                  # [not win]
     - {{posix}}pkg-config
