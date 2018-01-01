@@ -23,6 +23,7 @@ build:
   # If this is a new build for the same version, increment the build number.
   number: 0
 
+
   # This is required to make R link correctly on Linux.
   rpaths:
     - lib/R/lib/
@@ -31,7 +32,6 @@ build:
 # Suggests: png
 requirements:
   build:
-    - r-base
     - {{ cdt('libxrender-devel') }}      # [linux]
     - {{ cdt('libxext-devel') }}         # [linux]
     - {{ cdt('libx11-devel') }}          # [linux]
@@ -48,6 +48,9 @@ requirements:
     - {{posix}}automake          # [not win]
     - {{posix}}pkg-config
     - {{posix}}make
+
+  host:
+    - r-base
 
   run:
     - r-base
