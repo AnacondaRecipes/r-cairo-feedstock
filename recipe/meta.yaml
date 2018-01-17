@@ -52,10 +52,18 @@ requirements:
 
   host:
     - r-base
+    - {{native}}cairo                    # [not win]
+    - {{native}}libjpeg-turbo            # [win]
+    - {{native}}jpeg                     # [not win]
+    - {{native}}libtiff >=4.0.3,<4.0.8   # [win]
+    - {{native}}libtiff                  # [not win]
+    - {{native}}freetype                 # [not win]
 
   run:
     - r-base
-    - {{native}}gcc-libs         # [win]
+    - {{native}}gcc-libs                 # [win]
+    - {{native}}libjpeg-turbo            # [win]
+    - {{native}}libtiff >=4.0.3,<4.0.8   # [win]
 
 test:
   commands:
