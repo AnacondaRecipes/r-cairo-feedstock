@@ -10,8 +10,8 @@ package:
 source:
   fn: Cairo_{{ version }}.tar.gz
   url:
-    - https://cran.r-project.org/src/contrib/Cairo_{{ version }}.tar.gz
-    - https://cran.r-project.org/src/contrib/Archive/Cairo/Cairo_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/Cairo_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/Archive/Cairo/Cairo_{{ version }}.tar.gz
   sha256: 2a867b6cae96671d6bc3acf9334d6615dc01f6ecf1953a27cde8a43c724a38f4
 
 
